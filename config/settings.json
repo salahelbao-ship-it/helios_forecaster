@@ -1,0 +1,22 @@
+{
+    "hyperparameters": {
+        "optuna_search_space": {
+            "units": {"min": 32, "max": 256, "step": 32},
+            "dropout": {"min": 0.1, "max": 0.4},
+            "learning_rate": {"min": 0.0001, "max": 0.005},
+            "num_heads": {"min": 2, "max": 8, "step": 2},
+            "seq_len_options": [12, 24, 48, 72],
+            "kernel_size_options": [3, 5, 7]
+        },
+        "training": {
+            "batch_size": 32,
+            "max_epochs": 120,
+            "early_stopping_patience": 20
+        }
+    },
+    "system": {
+        "cache_dir": "cache",
+        "export_dir": "exports",
+        "db_path": "db/pv_registry.db"
+    }
+}

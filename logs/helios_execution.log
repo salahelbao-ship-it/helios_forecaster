@@ -1,0 +1,271 @@
+2026-04-03 19:45:13 | ERROR    | [engine:log] | CRITICAL FAULT: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 148, in run
+    df, qa_report, freq_str, freq_mode = self._ingest_data()
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 204, in _ingest_data
+    self.config.dataset_hash = DataLoader.hash_dataset(self.config.data_path)
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'DataLoader' has no attribute 'hash_dataset'
+
+2026-04-03 19:45:13 | ERROR    | [engine:run] | WorkerThread Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 571, in run
+    res = engine.run()
+          ^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 193, in run
+    raise e
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 148, in run
+    df, qa_report, freq_str, freq_mode = self._ingest_data()
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 204, in _ingest_data
+    self.config.dataset_hash = DataLoader.hash_dataset(self.config.data_path)
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'DataLoader' has no attribute 'hash_dataset'
+
+2026-04-03 19:48:01 | ERROR    | [engine:log] | CRITICAL FAULT: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 222, in _process_model
+    for fold_idx, (train_idx, test_idx) in enumerate(tscv.split(df), 1):
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py", line 1301, in _split
+    raise ValueError(
+ValueError: Too many splits=10 for number of samples=111 with test_size=10 and gap=24.
+
+2026-04-03 19:48:01 | ERROR    | [engine:run] | WorkerThread Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 571, in run
+    res = engine.run()
+          ^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 193, in run
+    raise e
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 222, in _process_model
+    for fold_idx, (train_idx, test_idx) in enumerate(tscv.split(df), 1):
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py", line 1301, in _split
+    raise ValueError(
+ValueError: Too many splits=10 for number of samples=111 with test_size=10 and gap=24.
+
+2026-04-03 19:48:10 | ERROR    | [engine:log] | CRITICAL FAULT: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 222, in _process_model
+    for fold_idx, (train_idx, test_idx) in enumerate(tscv.split(df), 1):
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py", line 1301, in _split
+    raise ValueError(
+ValueError: Too many splits=10 for number of samples=111 with test_size=10 and gap=24.
+
+2026-04-03 19:48:10 | ERROR    | [engine:run] | WorkerThread Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 571, in run
+    res = engine.run()
+          ^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 193, in run
+    raise e
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 222, in _process_model
+    for fold_idx, (train_idx, test_idx) in enumerate(tscv.split(df), 1):
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\model_selection\_split.py", line 1301, in _split
+    raise ValueError(
+ValueError: Too many splits=10 for number of samples=111 with test_size=10 and gap=24.
+
+2026-04-03 22:46:50 | ERROR    | [engine:log] | CRITICAL FAULT: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 253, in _process_model
+    y_quantiles, crossing_pre = self._execute_predictions(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 469, in _execute_predictions
+    y_quantiles = BaselineEngine.make_empirical_intervals(resid, y_base_pers, prep.capacity, q_labels)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'BaselineEngine' has no attribute 'make_empirical_intervals'
+
+2026-04-03 22:46:50 | ERROR    | [engine:run] | WorkerThread Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 571, in run
+    res = engine.run()
+          ^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 193, in run
+    raise e
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(
+          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 253, in _process_model
+    y_quantiles, crossing_pre = self._execute_predictions(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 469, in _execute_predictions
+    y_quantiles = BaselineEngine.make_empirical_intervals(resid, y_base_pers, prep.capacity, q_labels)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'BaselineEngine' has no attribute 'make_empirical_intervals'
+
+2026-04-04 15:13:26 | ERROR    | [engine:log] | CRITICAL FAULT: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(m_name, df, tscv, config_hash, freq_str, freq_mode, methodology, qa_report, step_idx, total_steps, lead_k_map)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 214, in _process_model
+    model_obj, prep, best_params, cached, degraded, t_dur, feat_rep = self._train_fold(m_name, fold_idx, df_train, config_hash, freq_str, freq_mode)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 355, in _train_fold
+    model_obj = build_quantile_dl(m_name, final_seq_len, n_features, best_params.get('units', 64), best_params.get('dropout', 0.2), best_params.get('lr', 0.001), q_labels, self.config.forecast_horizon, best_params.get('kernel_size', 3), best_params.get('num_heads', 4))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\models.py", line 93, in build_quantile_dl
+    x_pe = PositionalEncoding(seq_len, n_feats)(inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\models.py", line 47, in __init__
+    pos_emb[0, :, ::2] = np.sin(p / 10000 ** (2 * i / max_dims)).T
+    ~~~~~~~^^^^^^^^^^^
+ValueError: could not broadcast input array from shape (24,2) into shape (24,3)
+
+2026-04-04 15:13:26 | ERROR    | [engine:run] | WorkerThread Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 445, in run
+    res = engine.run()
+          ^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 187, in run
+    raise e
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(m_name, df, tscv, config_hash, freq_str, freq_mode, methodology, qa_report, step_idx, total_steps, lead_k_map)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 214, in _process_model
+    model_obj, prep, best_params, cached, degraded, t_dur, feat_rep = self._train_fold(m_name, fold_idx, df_train, config_hash, freq_str, freq_mode)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 355, in _train_fold
+    model_obj = build_quantile_dl(m_name, final_seq_len, n_features, best_params.get('units', 64), best_params.get('dropout', 0.2), best_params.get('lr', 0.001), q_labels, self.config.forecast_horizon, best_params.get('kernel_size', 3), best_params.get('num_heads', 4))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\models.py", line 93, in build_quantile_dl
+    x_pe = PositionalEncoding(seq_len, n_feats)(inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\models.py", line 47, in __init__
+    pos_emb[0, :, ::2] = np.sin(p / 10000 ** (2 * i / max_dims)).T
+    ~~~~~~~^^^^^^^^^^^
+ValueError: could not broadcast input array from shape (24,2) into shape (24,3)
+
+2026-04-05 13:06:10 | ERROR    | [engine:log] | CRITICAL FAULT: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(m_name, df, tscv, config_hash, freq_str, freq_mode, methodology, qa_report, step_idx, total_steps, lead_k_map)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 214, in _process_model
+    model_obj, prep, best_params, cached, degraded, t_dur, feat_rep = self._train_fold(m_name, fold_idx, df_train, config_hash, freq_str, freq_mode)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 355, in _train_fold
+    model_obj = build_quantile_dl(m_name, final_seq_len, n_features, best_params.get('units', 64), best_params.get('dropout', 0.2), best_params.get('lr', 0.001), q_labels, self.config.forecast_horizon, best_params.get('kernel_size', 3), best_params.get('num_heads', 4))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\models.py", line 120, in build_quantile_dl
+    x_ms = LayerNormalization(epsilon=1e-6)(x_ms + x_pe)
+                                            ~~~~~^~~~~~
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\layers\core\tf_op_layer.py", line 119, in handle
+    return TFOpLambda(op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 72, in error_handler
+    del filtered_tb
+ValueError: Exception encountered when calling layer "tf.__operators__.add" (type TFOpLambda).
+
+Dimensions must be equal, but are 64 and 5 for '{{node tf.__operators__.add/AddV2}} = AddV2[T=DT_FLOAT](Placeholder, Placeholder_1)' with input shapes: [?,24,64], [?,24,5].
+
+Call arguments received by layer "tf.__operators__.add" (type TFOpLambda):
+  • x=tf.Tensor(shape=(None, 24, 64), dtype=float32)
+  • y=tf.Tensor(shape=(None, 24, 5), dtype=float32)
+  • name=None
+
+2026-04-05 13:06:10 | ERROR    | [engine:run] | WorkerThread Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 445, in run
+    res = engine.run()
+          ^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 187, in run
+    raise e
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 177, in run
+    res = self._process_model(m_name, df, tscv, config_hash, freq_str, freq_mode, methodology, qa_report, step_idx, total_steps, lead_k_map)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 214, in _process_model
+    model_obj, prep, best_params, cached, degraded, t_dur, feat_rep = self._train_fold(m_name, fold_idx, df_train, config_hash, freq_str, freq_mode)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\engine.py", line 355, in _train_fold
+    model_obj = build_quantile_dl(m_name, final_seq_len, n_features, best_params.get('units', 64), best_params.get('dropout', 0.2), best_params.get('lr', 0.001), q_labels, self.config.forecast_horizon, best_params.get('kernel_size', 3), best_params.get('num_heads', 4))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\helios_forecaster\core\models.py", line 120, in build_quantile_dl
+    x_ms = LayerNormalization(epsilon=1e-6)(x_ms + x_pe)
+                                            ~~~~~^~~~~~
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\layers\core\tf_op_layer.py", line 119, in handle
+    return TFOpLambda(op)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\traceback_utils.py", line 72, in error_handler
+    del filtered_tb
+ValueError: Exception encountered when calling layer "tf.__operators__.add" (type TFOpLambda).
+
+Dimensions must be equal, but are 64 and 5 for '{{node tf.__operators__.add/AddV2}} = AddV2[T=DT_FLOAT](Placeholder, Placeholder_1)' with input shapes: [?,24,64], [?,24,5].
+
+Call arguments received by layer "tf.__operators__.add" (type TFOpLambda):
+  • x=tf.Tensor(shape=(None, 24, 64), dtype=float32)
+  • y=tf.Tensor(shape=(None, 24, 5), dtype=float32)
+  • name=None
+
+2026-04-08 18:54:07 | ERROR    | [engine:run] | Worker Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 387, in run
+    res = TrainingEngine(config=cfg, site_ctx=site, log_cb=self.log.emit, prog_cb=self.progress.emit, status_cb=self.status.emit, is_cancelled_func=self.is_cancelled, model_done_cb=self.model_finished.emit).run()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 173, in run
+    except Exception as e: self.log(f"CRITICAL FAULT: {traceback.format_exc()}", "error"); raise e
+                                                                                           ^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 160, in run
+    res = self._process_model(m_name, df, tscv, self.config.get_hash(), freq_str, freq_mode, qa_report, step_idx, total_steps, lead_k_map)
+          ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TrainingEngine' object has no attribute '_process_model'
+
+2026-04-08 19:02:58 | ERROR    | [engine:run] | Worker Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 473, in run
+    res = TrainingEngine(config=cfg, site_ctx=site, log_cb=self.log.emit, prog_cb=self.progress.emit, status_cb=self.status.emit, is_cancelled_func=self.is_cancelled, model_done_cb=self.model_finished.emit).run()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 184, in run
+    except Exception as e: self.log(f"CRITICAL FAULT: {traceback.format_exc()}", "error"); raise e
+                                                                                           ^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 170, in run
+    res = self._process_model(m_name, df, tscv, self.config.get_hash(), freq_str, freq_mode, qa_report, step_idx, total_steps, lead_k_map)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 226, in _process_model
+    model_obj, prep, best_params, cached, degraded, t_dur, feat_rep = self._train_fold(m_name, fold_idx, df_train, config_hash, freq_str, freq_mode)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 434, in _train_fold
+    return model_obj, prep, best_params, cached, degraded, t_duration, feat_report
+           ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'model_obj' where it is not associated with a value
+
+2026-04-10 11:07:36 | ERROR    | [engine:run] | Worker Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 499, in run
+    res = TrainingEngine(config=cfg, site_ctx=site, log_cb=self.log.emit, prog_cb=self.progress.emit, status_cb=self.status.emit, is_cancelled_func=self.is_cancelled, model_done_cb=self.model_finished.emit).run()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 162, in run
+    except Exception as e: self.log(f"CRITICAL FAULT: {traceback.format_exc()}", "error"); raise e
+                                                                                           ^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 148, in run
+    res = self._process_model(m_name, df, tscv, self.config.get_hash(), freq_str, freq_mode, qa_report, step_idx, total_steps, lead_k_map)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 208, in _process_model
+    model_obj, prep, best_params, cached, degraded, t_dur, feat_rep = self._train_fold(m_name, fold_idx, df_train, config_hash, freq_str, freq_mode)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 455, in _train_fold
+    self.cache.save_cache(cache_key, model_obj, prep, self.config, self.site.name, m_name, fold_idx, n_features, q_labels, best_params, manifest_to_save)
+TypeError: CacheManager.save_cache() takes 11 positional arguments but 12 were given
+
+2026-04-20 19:01:17 | ERROR    | [engine:run] | Worker Crash: Traceback (most recent call last):
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 491, in run
+    res = TrainingEngine(config=cfg, site_ctx=site, log_cb=self.log.emit, prog_cb=self.progress.emit, status_cb=self.status.emit, is_cancelled_func=self.is_cancelled, model_done_cb=self.model_finished.emit).run()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 162, in run
+    except Exception as e: self.log(f"CRITICAL FAULT: {traceback.format_exc()}", "error"); raise e
+                                                                                           ^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 148, in run
+    res = self._process_model(m_name, df, tscv, self.config.get_hash(), freq_str, freq_mode, qa_report, step_idx, total_steps, lead_k_map)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 208, in _process_model
+    model_obj, prep, best_params, cached, degraded, t_dur, feat_rep = self._train_fold(m_name, fold_idx, df_train, config_hash, freq_str, freq_mode)
+                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\salah\Desktop\VERSION PRO\helios_forecaster - PhD\core\engine.py", line 351, in _train_fold
+    elif is_ml and not is_postprocessor and "NGBoost" not in m_name and self.config.model_optuna.get(m_name, self.config.use_optuna):
+                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ExperimentConfig' object has no attribute 'use_optuna'
+

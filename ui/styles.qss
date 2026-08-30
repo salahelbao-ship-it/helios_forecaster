@@ -1,0 +1,124 @@
+/* ui/styles.qss */
+QMainWindow { 
+    background-color: #0b1120; 
+    color: #f8fafc; 
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif; 
+}
+QGroupBox { 
+    border: 1px solid #1e293b; 
+    border-radius: 10px; 
+    margin-top: 1.8em; 
+    font-weight: 700; 
+    color: #38bdf8; 
+    background-color: #0f172a; 
+}
+QGroupBox::title { 
+    subcontrol-origin: margin; 
+    left: 15px; 
+    padding: 0 8px; 
+    top: -5px;
+}
+QPushButton { 
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #334155, stop:1 #1e293b);
+    border: 1px solid #475569; 
+    border-radius: 8px; 
+    padding: 10px 16px; 
+    color: #f8fafc; 
+    font-weight: bold; 
+    font-size: 13px;
+}
+QPushButton:hover { 
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #475569, stop:1 #334155);
+    border-color: #38bdf8; 
+}
+QPushButton:pressed { 
+    background-color: #0f172a; 
+    border-color: #0ea5e9;
+}
+QListWidget, QTextEdit, QLineEdit, QComboBox, QSpinBox { 
+    background-color: #0b1120; 
+    color: #f8fafc; 
+    border: 1px solid #334155; 
+    border-radius: 6px; 
+    padding: 8px; 
+    selection-background-color: #38bdf8; 
+    selection-color: #000000; 
+}
+QTableWidget { 
+    background-color: #0b1120; 
+    alternate-background-color: #0f172a; 
+    color: #e2e8f0;
+    gridline-color: #334155;
+    border: 1px solid #334155;
+    border-radius: 8px;
+}
+QHeaderView::section { 
+    background-color: #1e293b; 
+    color: #cbd5e1; 
+    padding: 8px; 
+    border: none; 
+    border-right: 1px solid #334155; 
+    border-bottom: 2px solid #0284c7; 
+    font-weight: bold; 
+}
+QTabBar::tab { 
+    background: #1e293b; 
+    border: 1px solid #334155; 
+    border-bottom: none; 
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px; 
+    padding: 12px 20px; 
+    color: #94a3b8; 
+    margin-right: 3px; 
+    font-weight: bold; 
+}
+QTabBar::tab:selected { 
+    background: #0f172a; 
+    color: #38bdf8; 
+    border-top: 3px solid #38bdf8; 
+}
+QTabBar::tab:hover:!selected { 
+    background: #334155; 
+    color: #f8fafc; 
+}
+QTabWidget::pane {
+    border: 1px solid #334155;
+    border-radius: 8px;
+    border-top-left-radius: 0px;
+    background: #0f172a;
+}
+QProgressBar { 
+    border: 1px solid #1e293b; 
+    border-radius: 6px; 
+    text-align: center; 
+    color: #f8fafc; 
+    font-weight: 800; 
+    font-size: 13px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    background-color: #0f172a; 
+    min-height: 24px;
+}
+QProgressBar::chunk { 
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #0369a1, stop:0.5 #0ea5e9, stop:1 #38bdf8);
+    border-radius: 4px; 
+    margin: 2px;
+}
+QCheckBox { 
+    spacing: 10px; 
+    color: #e2e8f0; 
+}
+QCheckBox::indicator { 
+    width: 18px; 
+    height: 18px; 
+    border-radius: 5px; 
+    border: 1px solid #475569; 
+    background: #0b1120; 
+}
+QCheckBox::indicator:hover { 
+    border-color: #38bdf8; 
+}
+QCheckBox::indicator:checked { 
+    background-color: #38bdf8; 
+    border-color: #38bdf8; 
+}
+QLabel { color: #f8fafc; }
